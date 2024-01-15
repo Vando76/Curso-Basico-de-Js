@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex-02</title>
+  </head>
+  <body>
+    <h1>Curso Básico Js - semana 3 - ex-02</h1>
+    <script>
+      let lista = [];
+      let novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
+      
+      while(novoItem != "-"){
+        lista.push(novoItem);
+        novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
+      }
+      if(lista.length == 0) {
+        alert("A lista está vazia");
+      } else {
+        alert("Você deve comprar estes itens:");
+        for(let i =0; i < lista.length; i++){
+            alert(lista[i]);
+        }
+        let retirarItem = prompt("Digite o item para retirar ou _ se não quiser ");
+        while(retirarItem != "_"){
+            lista.push(retirarItem);
+            retirarItem = prompt("Digite o item para retirar ou _ se não quiser ");
+
+        }
+        if(lista.length != [i]) {
+            alert("Você não retirou nenhum item");
+        }
+    }
+        
+
+    </script>
+  </body>
+</html>
