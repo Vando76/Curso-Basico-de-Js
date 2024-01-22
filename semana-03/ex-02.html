@@ -9,31 +9,44 @@
     <h1>Curso Básico Js - semana 3 - ex-02</h1>
     <script>
       let lista = [];
-      let novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
-      
-      while(novoItem != "-"){
-        lista.push(novoItem);
-        novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
-      }
-      if(lista.length == 0) {
-        alert("A lista está vazia");
-      } else {
-        alert("Você deve comprar estes itens:");
-        for(let i =0; i < lista.length; i++){
-            alert(lista[i]);
-        }
-        let retirarItem = prompt("Digite o item para retirar ou _ se não quiser ");
-        while(retirarItem != "_"){
-            lista.push(retirarItem);
-            retirarItem = prompt("Digite o item para retirar ou _ se não quiser ");
+let novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
 
-        }
-        if(lista.length != [i]) {
-            alert("Você não retirou nenhum item");
-        }
+while (novoItem !== "-") {
+    lista.push(novoItem);
+    novoItem = prompt("Digite o nome do novo item ou - se não quiser adicionar");
+}
+
+if (lista.length === 0) {
+    alert("A lista está vazia");
+} else {
+    alert("Você de comprar estes itens:");
+
+    for (let i = 0; i < lista.length; i++) {
+        // Exibe o índice e o item para que o usuário saiba qual item remover
+        alert(i + 1 + ". " + lista[i]);
     }
-        
 
+    // Pergunta se o usuário deseja remover um item
+    let indiceRemover = prompt("Digite o número do item que deseja remover (ou 0 para continuar):");
+
+    // Converte o input para um número inteiro
+    indiceRemover = parseInt(indiceRemover);
+
+    // Verifica se o usuário deseja remover um item
+    if (indiceRemover > 0 && indiceRemover <= lista.length) {
+        // Remove o item selecionado
+        lista.splice(indiceRemover - 1, 1);
+
+        // Exibe a lista atualizada
+        alert("Item removido. Lista atualizada:");
+
+        for (let i = 0; i < lista.length; i++) {
+            alert(i + 1 + ". " + lista[i]);
+        }
+    } else {
+        alert("Continuando sem remover nenhum item.");
+    }
+}
     </script>
   </body>
 </html>
