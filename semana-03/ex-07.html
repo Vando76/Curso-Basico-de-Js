@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-05</title>
+</head>
+<body>
+    <h1>Curso JS - Semana 03</h1>
+
+    <script>
+// Inicializa a lista
+var itensLista = [];
+
+// Pede ao usuário para adicionar 3 itens à lista
+for (var i = 0; i < 3; i++) {
+    var novoItem = prompt("Digite um novo item para adicionar à lista:");
+    itensLista.push(novoItem);
+}
+
+// Exibe a lista atualizada
+alert("Itens adicionados à lista:\n" + itensLista.join("\n"));
+    </script>
+    
+</body>
+</html>
