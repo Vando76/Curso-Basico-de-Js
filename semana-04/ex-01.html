@@ -16,6 +16,7 @@
         .then(function(resposta){
             resposta.json().then(function(dados){
                 console.log(dados);
+                alert("Sua cidade é "+dados.city+ " no bairro "+dados.neighborhood+" na rua "+dados.street);
             })
 
         })
